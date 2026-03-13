@@ -23,7 +23,7 @@ public static class linkedlist{
                 tail=temp;
                 }
             }
-        void display(){
+            void display(){
             Node temp= head;
             while(temp!=null){
                 System.out.print(temp.data+" ");
@@ -41,6 +41,16 @@ public static class linkedlist{
 
         }
 
+        void insertAtBeginning(int value){
+            Node temp=new Node(value);
+                if(head==null ){ // empty list
+                    head=temp;
+                    tail=temp;
+                }else{ // non empty list
+                    temp.next=head;
+                    head=temp;
+                }
+        }
 }
     public static void main(String[] args) {
         linkedlist ll= new linkedlist();
@@ -50,8 +60,15 @@ public static class linkedlist{
         ll.display(); 
         System.out.println();
        // System.out.println("Size of the LinkedList is: "+ll.size());
+       ll.insertAtBeginning(6); // 6 5 7 8
+       ll.insertAtBeginning(1); // 1 6 5 7 8
+       ll.insertAtBeginning(2); // 2 1 6 5 7 8
+       ll.insertAtBeginning(3); // 3 2 1 6 5 7 8
+         ll.display(); 
+         System.out.println();
+         System.out.println("Size of the LinkedList is: "+ll.size());
 
-        
+
         
     }
 }

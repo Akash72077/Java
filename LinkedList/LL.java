@@ -35,13 +35,17 @@ public class LL {
         // 5  6  8  10  15
 
         // linking the nodes
-        a.next=b;
+        a.next=b; 
+        // 5 -> 6  8  10  15  after linking a to b 
         b.next=c;
+         // 5 -> 6 ->  8  10  15
         c.next=d;
+         // 5 -> 6 -> 8 -> 10  15
         d.next=e;
+         // 5 -> 6 -> 8 -> 10 -> 15
         d.next=null; 
          // the resultant linked list looks like 
-        // 5 -> 6 -> 8 -> 10 -> 15
+        // 5 -> 6 -> 8 -> 10 -> 15 -> null
         // checking the link of node by checking adresses
         System.out.println(a);
         System.out.println(b);

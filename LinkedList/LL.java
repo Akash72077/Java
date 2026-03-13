@@ -28,6 +28,17 @@ public class LL {
         head=newNode;
     }
 
+    public static void print(){
+            Node temp=head;
+        while (temp!=null) {
+            System.out.print(temp.data+" -> " +" ");
+            temp=temp.next;
+
+            
+        }
+        System.out.println("null");
+    }
+
     public static void main(String[] args) {
         Node a= new Node(5);//head Node
         Node b= new Node(6);
@@ -36,7 +47,7 @@ public class LL {
         Node e= new Node(15);
        // before linking nodes 
         // 5  6  8  10  15
-
+head=a;
         // linking the nodes
         a.next=b; 
         // 5 -> 6  8  10  15  after linking a to b 
@@ -46,7 +57,7 @@ public class LL {
          // 5 -> 6 -> 8 -> 10  15
         d.next=e;
          // 5 -> 6 -> 8 -> 10 -> 15
-        e.next=null; // last node points to null
+         // last node points to null
          // the resultant linked list looks like 
         // 5 -> 6 -> 8 -> 10 -> 15 -> null
         // checking the link of node by checking adresses
@@ -72,13 +83,8 @@ public class LL {
         // System.out.println(a.next.next.data);//c
         // System.out.println(a.next.next.next.data);//d
         // System.out.println(a.next.next.next.next.data); //d
-
-        Node temp=a;
-      
-        for(int i=0; i<5; i++){
-            System.out.println(temp.data);
-            temp=temp.next;
-        }
+        print();
+        
     }
 
 }

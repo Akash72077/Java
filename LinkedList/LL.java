@@ -1,4 +1,15 @@
 public class LL {
+
+    public static void display(Node head){
+
+        Node temp=head;
+        while(temp!=null){
+           System.out.print(temp.data+" -> ");
+           temp=temp.next;  
+         }
+         System.out.print("null");
+    }
+
     public static class Node{
  
         // the main draw back of linked list is  it takes memory for both data and address
@@ -15,29 +26,6 @@ public class LL {
         this.next= null; // tail
     }
     }
-    public static Node head;
-    public static Node tail;
-    public void addFirst(int data){
-         Node newNode= new Node(data);
-        if(head==null){
-            head=tail= newNode;
-            return;
-        }
-       
-        newNode.next= head;
-        head=newNode;
-    }
-
-    public static void print(){
-            Node temp=head;
-        while (temp!=null) {
-            System.out.print(temp.data+" -> " +" ");
-            temp=temp.next;
-
-            
-        }
-        System.out.println("null");
-    }
 
     public static void main(String[] args) {
         Node a= new Node(5);//head Node
@@ -47,7 +35,6 @@ public class LL {
         Node e= new Node(15);
        // before linking nodes 
         // 5  6  8  10  15
-head=a;
         // linking the nodes
         a.next=b; 
         // 5 -> 6  8  10  15  after linking a to b 
@@ -83,7 +70,7 @@ head=a;
         // System.out.println(a.next.next.data);//c
         // System.out.println(a.next.next.next.data);//d
         // System.out.println(a.next.next.next.next.data); //d
-        print();
+        display(a);
         
     }
 

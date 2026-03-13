@@ -1,4 +1,15 @@
 public class LL {
+ 
+    public static void insertAtEnd(Node head , int value){
+        Node temp=new Node(value);
+        Node t=head;
+        while (t.next!=null) {
+            t=t.next;
+        }
+          t.next=temp;
+          
+    }
+
 // function to display list with temp variable
     public static void display(Node head){
 
@@ -12,8 +23,6 @@ public class LL {
     // function to display linked list without using temp 
 // not ideal for reusable to preserve head function we have to use temp
     //  public static void display(Node a){
-
-       
     //     while(a!=null){
     //        System.out.print(a.data+" -> ");
     //        a=a.next;  
@@ -128,6 +137,9 @@ public class LL {
         //System.out.println();
         int len=length(a);
         System.out.println(len);
+
+        insertAtEnd(a,80);
+        display(a);
     }
 
 }

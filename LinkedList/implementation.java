@@ -1,6 +1,4 @@
-
-public class implementation {
-    
+public class implementation {  
     public static class Node{
     int data;
     Node next;
@@ -12,6 +10,7 @@ public class implementation {
 public static class linkedlist{
             Node head=null;
             Node tail=null;
+            int size=0;
             void insertAtEnd(int value){
                 Node temp=new Node(value);
                 if(head==null ){
@@ -22,6 +21,7 @@ public static class linkedlist{
                 tail.next=temp;
                 tail=temp;
                 }
+                size++;
             }
             void display(){
             Node temp= head;
@@ -30,14 +30,16 @@ public static class linkedlist{
                 temp=temp.next;
             }
         }
-        int size(){
-            int count=0;
-             Node temp= head;
-            while(temp!=null){
-                count++;
-                temp=temp.next;
-            }
-            return count;
+        int size(){///    O(n)
+            // int count=0;
+            //  Node temp= head;
+            // while(temp!=null){
+            //     count++;
+            //     temp=temp.next;
+            // }
+            // return count;
+            return size; // instead of traversing eaach and every list we have to increase the size value when ever the insert places at any condition then simply return the size
+            
 
         }
 
@@ -50,6 +52,7 @@ public static class linkedlist{
                     temp.next=head;
                     head=temp;
                 }
+                size++;
         }
         void insertAt(int idx,int value){
             if(idx==size()){  // if index postion is last then head will be not updated so we have to insert using insert at end function 
@@ -72,6 +75,7 @@ public static class linkedlist{
         }
         t.next=temp.next;
         temp.next=t;
+        size++;
     }
 
         int getAt(int idx){
@@ -105,11 +109,6 @@ public static class linkedlist{
        System.out.println();
        ll.display();
        System.out.println();
-       System.out.println(ll.getAt(2));
-       
-
-
-
-        
+       System.out.println(ll.getAt(2));   
     }
 }

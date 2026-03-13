@@ -11,6 +11,22 @@ public static class linkedlist{
             Node head=null;
             Node tail=null;
             int size=0;
+        void deleteAtFirst(){
+            head=head.next;
+        }
+        void deleteAtIndex(int idx){
+            if(idx==0){
+                deleteAtFirst();
+            }
+            Node temp= head;
+            for(int i=1; i<idx-1; i++){
+                temp=temp.next;
+            }
+            temp.next=temp.next.next;
+            tail=temp;
+            size--;
+
+        }
             void insertAtEnd(int value){
                 Node temp=new Node(value);
                 if(head==null ){
@@ -39,7 +55,7 @@ public static class linkedlist{
             // }
             // return count;
             return size; // instead of traversing eaach and every list we have to increase the size value when ever the insert places at any condition then simply return the size
-            
+
 
         }
 
@@ -102,13 +118,17 @@ public static class linkedlist{
        ll.insertAtBeginning(1); // 1 6 5 7 8
        ll.insertAtBeginning(2); // 2 1 6 5 7 8
        ll.insertAtBeginning(3); // 3 2 1 6 5 7 8
-         ll.display(); 
+      //   ll.display(); 
          //System.out.println();
        //  System.out.println("Size of the LinkedList is: "+ll.size());
        ll.insertAt(2,10); //3 2 10 1 6 5 7 8
        System.out.println();
        ll.display();
        System.out.println();
-       System.out.println(ll.getAt(2));   
+       //System.out.println(ll.getAt(2));  
+       ll.deleteAtIndex(4);
+       ll.display();
+       
+       
     }
 }

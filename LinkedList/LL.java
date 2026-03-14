@@ -46,7 +46,7 @@ public class LL {
           System.out.print(head.data+" -> ");
     }
 
-    public static int length(Node head){
+    public static int length(Node head){ // function to calculate the length of Node
          Node temp=head;
          int count=0;
         while(temp!=null){

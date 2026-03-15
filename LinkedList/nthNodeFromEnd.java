@@ -1,6 +1,5 @@
 public class nthNodeFromEnd {
-
-    
+        // Code to find nth node using temp varible
     public static Node nthNode(Node head, int n){
             int size=0;
             Node temp=head;
@@ -13,7 +12,23 @@ public class nthNodeFromEnd {
                  temp=temp.next;
             }
             return temp;
+    }
+        // function to find nth node using fast and slow pointer
+    public static Node nthNodeTwoPointer(int n, Node head){
+            Node slow= head;
+            Node fast=head;
+            // first move fast n times 
+            for(int i=1; i<=n; i++){
+                fast=fast.next;
+            }
 
+            // then move both Nodes untill fast becomes null then slow will point it from nth of second
+            while(fast!=null){
+                slow=slow.next;
+                fast=fast.next;
+            }
+
+        return slow;
     }
 
     public static class Node{  // defining nodes
@@ -44,8 +59,7 @@ public class nthNodeFromEnd {
             g.next=h;
             //5 10 15 20 30 24 50 90
             Node q=nthNode(a,4);
-            System.out.println(q.data);
-            
-
+           // System.out.println(q.data);       
+            System.out.println(nthNodeTwoPointer(2, a).data);
     }
 }

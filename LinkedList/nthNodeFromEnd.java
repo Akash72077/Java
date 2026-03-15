@@ -14,6 +14,7 @@ public class nthNodeFromEnd {
             return temp;
     }
         // function to find nth node using fast and slow pointer
+        //interviewers fav method
     public static Node nthNodeTwoPointer(int n, Node head){
             Node slow= head;
             Node fast=head;

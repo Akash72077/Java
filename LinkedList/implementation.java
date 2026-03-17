@@ -1,17 +1,17 @@
 public class implementation {  //implementation of linked lsist
-    public static class Node{//defining linked list
-    int data;
-    Node next;
-    public Node(int data){
-        this.data=data;
-    }
+        public static class Node{//defining linked list
+        int data;
+        Node next;
+        public Node(int data){
+            this.data=data;
+        }
 }
 
 public static class linkedlist{ 
-            Node head=null;
-            Node tail=null;
-            int size=0;
-        void deleteAtFirst(){
+        Node head=null;
+        Node tail=null;
+        int size=0;
+                 void deleteAtFirst(){
             head=head.next;
             size--;
             return;
@@ -48,15 +48,15 @@ public static class linkedlist{
                 temp=temp.next;
             }
         }
-        int size(){///    O(n)
-            // int count=0;
-            //  Node temp= head;
-            // while(temp!=null){
-            //     count++;
-            //     temp=temp.next;
-            // }
-            // return count;
-            return size; // instead of traversing eaach and every list we have to increase the size value when ever the insert places at any condition then simply return the size
+            int size(){///    O(n)
+                // int count=0;
+                //  Node temp= head;
+                // while(temp!=null){
+                //     count++;
+                //     temp=temp.next;
+                // }
+                // return count;
+                return size; // instead of traversing eaach and every list we have to increase the size value when ever the insert places at any condition then simply return the size
 
 
         }

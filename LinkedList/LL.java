@@ -65,9 +65,19 @@ public class LL {
                 temp=temp.next;
             }
             return false;
-
-
     }
+        public static int Findindex(Node head, int n){
+            Node temp=head;
+            int count=0;
+             while (temp!=null) {
+                if(temp.data==n){
+                    return count;
+                }
+                count++;
+                temp=temp.next;
+            }
+            return -1;
+        }
     public static class Node{
         // the main draw back of linked list is  it takes memory for both data and address
         //  but the values can be stored any where bcz they all are connected
@@ -155,6 +165,13 @@ public class LL {
         System.out.println();
         System.out.println(isExist(a, 25));
         System.out.println(isExist(a,64));
+        int pos=Findindex(a, 25);
+        if(pos==-1){
+             System.out.println("Element Not found");
+        }else{
+             System.out.println("The Element found at: "+pos);
+        
     }
 
+}
 }

@@ -8,7 +8,7 @@ public class implementation {  //implementation of linked lsist
 }
 
 public static class linkedlist{ 
-        Node head=null;
+        Node head=null; // intially both head and tail are empty
         Node tail=null;
         int size=0;
                  void deleteAtFirst(){

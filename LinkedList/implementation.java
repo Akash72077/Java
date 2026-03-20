@@ -36,7 +36,7 @@ public static class linkedlist{
                     tail=temp;
                 }
                 else{
-                tail.next=temp;
+                tail.next=temp;// if LL is not empty then add an element
                 tail=temp;
                 }
                 size++; //update size when ever an element is added at end 

@@ -18,7 +18,7 @@ public static class linkedlist{
         }
         void deleteAtIndex(int idx){
             if(idx==0){
-                deleteAtFirst();
+                deleteAtFirst(); // if pos is first element then delete first element
             }
             Node temp= head;
             for(int i=1; i<idx-1; i++){

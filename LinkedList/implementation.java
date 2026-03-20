@@ -22,7 +22,7 @@ public static class linkedlist{
             }
             Node temp= head;
             for(int i=1; i<idx-1; i++){
-                temp=temp.next;
+                temp=temp.next;// traverse the n-1 th node which we have to delete 
             }
             temp.next=temp.next.next;
             tail=temp;

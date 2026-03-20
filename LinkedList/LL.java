@@ -14,7 +14,7 @@ public class LL {
     public static void display(Node head){
 
         Node temp=head;
-        while(temp!=null){
+        while(temp!=null){  //stops program when it reaches to null
            System.out.print(temp.data+" -> ");
            temp=temp.next;  
          }
@@ -32,7 +32,7 @@ public class LL {
 
     public static void displayr(Node head){
         // display nodes using recusion
-        if(head==null)
+        if(head==null)// base case
             return;
           System.out.print(head.data+" -> ");
           display(head.next);

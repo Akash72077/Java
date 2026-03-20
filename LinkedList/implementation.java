@@ -24,7 +24,7 @@ public static class linkedlist{
             for(int i=1; i<idx-1; i++){
                 temp=temp.next;// traverse the n-1 th node which we have to delete 
             }
-            temp.next=temp.next.next;
+            temp.next=temp.next.next; // link the node with next next element the next element is removed
             tail=temp;
             size--;
 

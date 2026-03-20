@@ -101,7 +101,7 @@ public static class linkedlist{
         int getAt(int idx){
             if(idx<0 || idx>size()){
                 System.out.println("Wrong index");
-                return -1; 
+                return -1; // -1 indicates negative response means unsuccessful
             }
             Node temp=head;
             for(int i=1; i<=idx; i++){
